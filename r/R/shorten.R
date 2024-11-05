@@ -26,11 +26,11 @@ shorten <- function(code, latitude, longitude, padding_character_ = "0", min_tri
   if (stringr::str_detect(code, padding_character_, negate = FALSE)) {
     cli::cli_abort(c(
       "Error while shortening Open Location Code:",
-      "Cannot shorten padded codes:  {code}",
+      "Cannot shorten padded codes: {code}",
       "Supplied code contains the padding character: {padding_character_}"
     ))
   }
-  code <- code |> stringr::str_to_upper()
+  code <- stringr::str_to_upper(code)
   codeArea <- decode(code)
 
   if (codeArea$codeLength < min_trimmable_code_length_) {

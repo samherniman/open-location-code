@@ -17,14 +17,11 @@
 #' isValid("8FVC9GF6+6X7")
 #' isValid("I am not an OLC")
 isValid <- function(code, seperator_ = "\\+", padding_character_ = "0", seperator_position_ = 9, code_alphabet_ = "23456789CFGHJMPQRVWX") {
-  # Determines if a code is valid.
-
-
   # The separator is required.
   if (!stringr::str_detect(code, seperator_)) {
     return(FALSE)
   }
-  # Is it the only character?
+  # Is the seperator the only character?
   if (nchar(code) == 1) {
     return(FALSE)
   }
