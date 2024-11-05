@@ -20,3 +20,5 @@
 /js/test/*json
 # Ignore Rust lockfile.
 /rust/Cargo.lock
+
+.DS_Store

@@ -1,0 +1,63 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# openlocationcode
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/openlocationcode)](https://CRAN.R-project.org/package=openlocationcode)
+<!-- badges: end -->
+
+This is the R Open Location Code package. It allows you to encode and decode Open Location Codes in the R language.
+
+## Installation
+
+You can install the development version of openlocationcode like so:
+
+``` r
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```
+
+Hopefully it will be available on CRAN soon.
+
+## Using the package
+
+The following is an example of what you can do with the package.
+
+You can turn the package on with `library()`
+
+```{r example}
+library(openlocationcode)
+```
+
+You can turn latitude longitude coordinates into Open Location Codes with `encode()`
+
+```{r encode}
+encode(47.365590, 8.524997)
+```
+
+You can turn Open Location Codes into latitude longitude coordinates with `decode()`
+
+```{r decode}
+decode("8FVC9G8F+6X")
+```
+
+## Formatting
+
+Code should be formatted according to the
+[Google R Style Guide](http://google.github.io/styleguide/pyguide.html).
+
+You can format your code automatically using
+[YAPF](https://github.com/google/yapf/).
